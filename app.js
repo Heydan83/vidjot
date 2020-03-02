@@ -32,6 +32,7 @@ mongoose.connect(db.mongoURI, {
     console.log('MongoDb Connected...');
   })
   .catch((error) => {
+    console.log(db.mongoURI);
     console.log(error);
   });
 
