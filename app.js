@@ -3,7 +3,8 @@ const path = require('path');
 const exphbs  = require('express-handlebars');
 const methodOverride = require('method-override')
 const flash = require('connect-flash');
-const session = require('express-session');
+// const session = require('express-session');
+const session = require('cookie-session');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const mongoose = require('mongoose');
@@ -58,9 +59,9 @@ app.use(methodOverride('_method'));
 
 // Express session middleware
 app.use(session({
-  secret: 'secret',
-  resave: true,
-  saveUninitialized: true,
+  secret: 'secret'
+  // resave: true,
+  // saveUninitialized: true,
 }));
 
 // Passport middleware
